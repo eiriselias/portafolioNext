@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 
+body{
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+}
