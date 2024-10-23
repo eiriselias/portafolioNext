@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="h-16">
+        <header>
           <NavBar />
         </header>
-        <main className="min-h-[85vh]">
+        <main className="bg-fondColor">
           {children}
         </main>
         <footer>

@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         primaryColor: "var(--primaryColor)",
         selectColor: "var(--selectColor)",
+        fondColor: "var(--fondColor)",
       },
     },
   },
