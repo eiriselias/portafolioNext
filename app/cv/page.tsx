@@ -1,4 +1,4 @@
-import Cv from "../components/cv/Cv"
+import Cv from "@/components/cv/Cv"
 
 const CvPage = ()=>{
   return(
