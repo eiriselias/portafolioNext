@@ -4,9 +4,11 @@ import Link from 'next/link'
 const NavBar = () => {
   return (
     <nav className='flex justify-between px-16 font-bold bg-primaryColor text-white '>
-        <div className='flex items-center gap-2 hover:bg-selectColor px-4 hover:cursor-pointer'>
-            <i className="fa-duotone fa-solid fa-briefcase"></i>
-            <h2>Portafolio</h2>
+        <div className='flex items-center hover:bg-selectColor px-4 hover:cursor-pointer'>
+            <Link href="/" className='flex items-center gap-2'>
+                <i className="fa-duotone fa-solid fa-briefcase"></i>
+                <h2>Portafolio</h2>
+            </Link>
         </div>
         <div>
             <ul className='flex gap-2 hover:cursor-pointer'>

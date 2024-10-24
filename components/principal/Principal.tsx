@@ -1,7 +1,13 @@
+'use client'
 import React from 'react'
 import Button from '../ui/Button'
+import { useRouter } from 'next/navigation'
 
 const Principal = () => {
+  const router = useRouter()
+  const handelClick = ()=>{
+    router.push("/cv")
+  }
   return (
     <div className='bg-[url("/images/background.jpg")] bg-cover bg-center w-full h-full relative'>
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -15,7 +21,7 @@ const Principal = () => {
             </div>        
             <h1 className='font-bold text-4xl'>Eiris Salazar</h1> 
             <p className='text-xl'>Full Stack Developer</p>
-            <Button className="mt-16">Ver Mi CV</Button>
+            <Button onClick={ handelClick } className="mt-16">Ver Mi CV</Button>
           </div>
       </div>
   )
