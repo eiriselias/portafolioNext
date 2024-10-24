@@ -16,7 +16,7 @@ const Footer = () => {
         </Link>
       </div>
       <div>
-        <p>© Diseñada por Eiris Salazar Full Stack Developer</p>
+        <p>© Eiris Salazar Full Stack Developer - 2024</p>
       </div>
     </div>
   )
