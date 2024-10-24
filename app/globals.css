@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+  .pageContainer{
+    @apply  bg-white w-[95%] p-8;
+  }
+}
 
 body{
   display: grid;

@@ -14,7 +14,7 @@ const NavBar = () => {
                     <Link href="/">Principal</Link>
                 </li>
                 <li className='hover:bg-selectColor p-4'>
-                    <Link href="#">Habilidades</Link>
+                    <Link href="#skills">Habilidades</Link>
                 </li>
                 <li className='hover:bg-selectColor p-4'>
                     <Link href="#">Proyectos</Link>
