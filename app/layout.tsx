@@ -22,7 +22,7 @@ export default function RootLayout({
         <header>
           <NavBar />
         </header>
-        <main className="bg-fondColor">
+        <main className="bg-fondColor mt-12">
           {children}
         </main>
         <footer>
