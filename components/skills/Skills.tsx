@@ -20,7 +20,7 @@ const Skills = () => {
         {
             datas && datas.map((data)=>{
                 return(
-                    <div className='relative group hover:scale-105'>
+                    <div className='relative group hover:scale-105' key={data.id}>
                         <img src={data.image} alt={`logo${data.name}`} width="100" className={data.clase}/>
                         <div className='absolute bottom-full mb-2 hidden group-hover:block bg-primaryColor text-white font-bold p-2 rounded'>
                             {data.name}
