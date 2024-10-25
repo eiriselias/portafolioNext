@@ -19,15 +19,15 @@ const NavBar = () => {
                     <Link href="/#skills">Habilidades</Link>
                 </li>
                 <li className='hover:bg-selectColor p-4'>
-                    <Link href="#">Proyectos</Link>
+                    <Link href="/enconstrucion">Proyectos</Link>
                 </li>
                 <li className='hover:bg-selectColor p-4'>
-                    <Link href="#">Certificados</Link>
+                    <Link href="/enconstrucion">Certificados</Link>
                 </li>
             </ul>
         </div>
         <div className='hover:bg-selectColor p-4 hover:cursor-pointer'>
-            <Link href="/">Iniciar Sesión</Link>
+            <Link href="/enconstrucion">Iniciar Sesión</Link>
         </div>
     </nav>
   )
