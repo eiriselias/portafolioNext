@@ -11,11 +11,11 @@ const Cv = ()=>{
   return(
     <div className="h-full relative">
       <object
-        data="/documents/CV2022ConLink.pdf"
+        data="/documents/Curriculum2024.pdf"
         type="application/pdf"
         className="w-full h-full"
       >
-        <p>Tu navegador no soporta PDF. Puedes <a href="/documents/CV2022ConLink.pdf">descargar el PDF aquí</a>.</p>
+        <p>Tu navegador no soporta PDF. Puedes <a href="/documents/Curriculum2024.pdf">descargar el PDF aquí</a>.</p>
       </object>
       <Button className="absolute right-8 bottom-4"
         onClick={handleClick}
