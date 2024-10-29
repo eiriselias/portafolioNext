@@ -12,7 +12,7 @@ const Proyects = () => {
           proyectos && proyectos.map((proyect)=>{
             return(
               <Link href={proyect.url} key={proyect.id}> 
-                <div className='bg-white rounded-lg overflow-hidden hover:cursor-pointer' >
+                <div className='bg-white rounded-lg overflow-hidden ' >
                   <div className='w-full h-44 overflow-hidden'>
                       <img src={proyect.imgProyect} alt={`img-${proyect.name}`} />
                   </div>
@@ -24,6 +24,25 @@ const Proyects = () => {
                               <img src={proyect.imgDev} alt="logoDev" />
                           </div>
                       </div>
+                  </div>
+                  <hr />
+                  <div className='bg-blue-100 flex justify-end py-2 relative'>
+                    {
+                      proyect.skills && proyect.skills.map((skill)=>{
+                        return(
+                          <div className='group'  key={skill.id}>
+                            <img 
+                              src={skill.image} 
+                              alt={`skill${skill.id}`}                              
+                              className='h-8 w-8 gap-2 mr-2'
+                            />
+                            <div className='absolute bottom-full text-[10px] mb-2 hidden group-hover:block bg-primaryColor text-white p-2 rounded'>
+                              {skill.name}
+                            </div>
+                          </div>
+                        )
+                      })
+                    }
                   </div>
                 </div>
              </Link>
