@@ -1,5 +1,6 @@
 
 import Principal from '@/components/principal/Principal';
+import Proyects from '@/components/proyects/Proyects';
 import Skills from '@/components/skills/Skills';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -11,9 +12,10 @@ export default function Home() {
       </section>
       <section id='skills' className='pageContainer'>  
         <Skills /> 
-      </section>{/* 
-      <section id="proyects">
-      </section> */}
+      </section>
+      <section id="proyects" className='w-full'>
+        <Proyects />
+      </section>
    </div>
   );
 }
