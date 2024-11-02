@@ -119,6 +119,12 @@ const skillsData = [
         "image":"https://i.imgur.com/E3mrgit.png",
         "clase":""
     },
+    {
+        "id": 21,
+        "name":"AppSheet",
+        "image":"https://i.imgur.com/NPpQhmT.png",
+        "clase":""
+    },
 ]
 
 export default skillsData
