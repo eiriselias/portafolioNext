@@ -1,11 +1,11 @@
 import Certificados from '@/components/certificados/Certificados'
 import React from 'react'
-import {certificadosData} from "@/helpers/certificados.helpers"
+import {certificadosData, ICertificado} from "@/helpers/certificados.helpers"
 
 const CertificadoIdPage:React.FC <{params:{id: string}}> = async ({params}) => {
 
+  const datas:ICertificado[] = certificadosData
   const {id} = await params
-  const datas = await certificadosData
 
   const dataCertificado = datas.find((data)=> data.id.toString() === id)
 
