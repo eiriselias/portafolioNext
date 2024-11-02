@@ -22,12 +22,12 @@ const NavBar = () => {
                     <Link href="/#proyects">Proyectos</Link>
                 </li>
                 <li className='hover:bg-selectColor p-4'>
-                    <Link href="/enconstrucion">Certificados</Link>
+                    <Link href="/certificados">Certificados</Link>
                 </li>
             </ul>
         </div>
         <div className='hover:bg-selectColor p-4 hover:cursor-pointer'>
-            <Link href="/enconstrucion">Iniciar Sesión</Link>
+            <Link href="/signIn">Iniciar Sesión</Link>
         </div>
     </nav>
   )

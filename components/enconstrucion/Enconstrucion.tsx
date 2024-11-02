@@ -3,7 +3,7 @@ import React from 'react'
 import Button from '@/components/ui/Button'
 import { useRouter } from 'next/navigation'
 
-const EnconstrucionPage = () => {
+const Enconstrucion = () => {
     const router = useRouter()
     const handleClick = ()=>{
         router.push("/")
@@ -16,4 +16,4 @@ const EnconstrucionPage = () => {
   )
 }
 
-export default EnconstrucionPage
+export default Enconstrucion
