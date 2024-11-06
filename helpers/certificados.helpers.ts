@@ -1,52 +1,58 @@
-const certificados = [
+export const certificadosData = [
     {
         "id": 1,
-        "name":"Full Stack",
+        "name":"Desarrollo Web Full Stack",
         "entity":"Soy Henry",
         "url":"/documents/SoyHenry.pdf"
     },
     {
         "id": 2,
-        "name":"Angular",
-        "entity":"Soy Henry",
+        "name":"Angular Js",
+        "entity":"Cursa",
         "url":"/documents/certificadoaAngularJs.pdf"
     },
     {
         "id": 3,
-        "name":"GitHub",
-        "entity":"Soy Henry",
+        "name":"Git y GitHub",
+        "entity":"Ademass",
         "url":"/documents/certificadoGitGithub.pdf"
     },
     {
         "id": 4,
-        "name":"JavaScript",
-        "entity":"Soy Henry",
+        "name":"JavaScript avanzado",
+        "entity":"Linkedin",
         "url":"/documents/certificadoJavaScriptAvanzado.pdf"
     },
     {
         "id": 5,
-        "name":"MySQL",
-        "entity":"Soy Henry",
+        "name":"MySQL esencial",
+        "entity":"Linkedin",
         "url":"/documents/certificadoMySQL.pdf"
     },
     {
         "id": 6,
         "name":"Python",
-        "entity":"Soy Henry",
+        "entity":"Cursa",
         "url":"/documents/certificadoPython.pdf"
     },
     {
         "id": 7,
-        "name":"CSS",
+        "name":"HTM y CSS Basico",
         "entity":"Open BootCamp",
         "url":"/documents/diplomaCssOpenBootcamp.pdf"
     },
     {
         "id": 8,
-        "name":"HTML",
-        "entity":"Soy Henry",
+        "name":"HTML5",
+        "entity":"Ademass",
         "url":"/documents/diplomaHtml5.pdf"
     },
 ]
 
-export default certificados
+
+export interface ICertificado {
+    id: number,
+    name: string,
+    entity: string,
+    url: string
+}

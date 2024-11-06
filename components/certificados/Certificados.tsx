@@ -2,23 +2,26 @@
 import React from 'react'
 import Button from '../ui/Button'
 import { useRouter } from 'next/navigation'
+import {ICertificado} from '@/helpers/certificados.helpers'
 
-const Certificados = () => {
+
+
+const Certificados = ({url}:ICertificado) => {
 
     const router = useRouter()
 
     const handleClick = ()=>{
-        router.push("/")
+        router.push("/certificados")
     }
 
   return (
     <div className="h-full relative">
       <object
-        data="/documents/Curriculum2024.pdf"
+        data={url}
         type="application/pdf"
         className="w-full h-full"
       >
-        <p>Tu navegador no soporta PDF. Puedes <a href="/documents/Curriculum2024.pdf">descargar el PDF aquí</a>.</p>
+        <p>Tu navegador no soporta PDF. Puedes <a href={url}>descargar el PDF aquí</a>.</p>
       </object>
       <Button className="absolute right-8 bottom-4"
         onClick={handleClick}
