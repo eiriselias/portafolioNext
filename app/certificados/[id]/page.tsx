@@ -1,8 +1,13 @@
+'use client'
+
 import Certificados from '@/components/certificados/Certificados'
 import React from 'react'
 import {certificadosData, ICertificado} from "@/helpers/certificados.helpers"
+import { useParams } from 'next/navigation'
 
-const CertificadoIdPage:React.FC <{params:{id: string}}> = async ({params}) => {
+const CertificadoIdPage= () => {
+
+  const params = useParams()
 
   const datas: ICertificado[] = certificadosData
 
