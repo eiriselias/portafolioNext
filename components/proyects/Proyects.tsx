@@ -12,7 +12,7 @@ const Proyects = () => {
           proyectos && proyectos.map((proyect)=>{
             return(
               <Link href={proyect.url} target='_blank' key={proyect.id}> 
-                <div className='bg-white rounded-lg overflow-hidden ' >
+                <div className='bg-white rounded-lg overflow-hidden animate-show' >
                   <div className='w-full h-44 overflow-hidden'>
                       <img src={proyect.imgProyect} alt={`img-${proyect.name}`} />
                   </div>
