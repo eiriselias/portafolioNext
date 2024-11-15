@@ -142,6 +142,28 @@ const proyects = [
                     }
                 ]
             },
+     {
+            "id": 5,
+                "name": "ZLMantenimientos",
+                "miniDescription":"Este proyecto consiste en una aplicación creada con AppSheet para el frontend y Excel como backend. La herramienta permite gestionar de manera eficiente los reportes de mantenimiento de equipos de maquinaria, incluyendo montacargas y tractocamiones. La aplicación facilita el registro, seguimiento y análisis de las actividades de mantenimiento, mejorando la organización y la toma de decisiones en la gestión de maquinaria",
+                
+                "description": "Este proyecto consiste en una aplicación creada con AppSheet para el frontend y Excel como backend. La herramienta permite gestionar de manera eficiente los reportes de mantenimiento de equipos de maquinaria, incluyendo montacargas y tractocamiones. La aplicación facilita el registro, seguimiento y análisis de las actividades de mantenimiento, mejorando la organización y la toma de decisiones en la gestión de maquinaria",
+                "imgProyect":"https://i.imgur.com/H6BxU9m.png",
+                "imgDev": "https://i.imgur.com/NPpQhmT.png", // icono appsheet
+                "url":"",
+                "skills":[
+                    {
+                        "id":1,
+                        "image":"https://i.imgur.com/NPpQhmT.png",
+                        "name":"AppSheet"
+                    },
+                    {
+                        "id": 2,
+                        "image":"https://i.imgur.com/OVMoVEY.png",
+                        "name":"Excel",
+                    },
+                ]
+            },
 ]
 
 export default proyects
