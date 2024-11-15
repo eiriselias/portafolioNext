@@ -5,9 +5,9 @@ import Link from 'next/link'
 const Proyects = () => {
   const proyectos = proyects
   return (
-    <div className='bg-primaryColor flex flex-col items-center p-16'>
+    <div className='bg-primaryColor flex flex-col items-center p-1 sm:p-4 md:p-16'>
       <h1 className='text-2xl font-bold text-white mb-8'>Proyectos</h1>
-      <div className='grid grid-cols-4 gap-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4'>
         {
           proyectos && proyectos.map((proyect)=>{
             return(

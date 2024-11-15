@@ -16,7 +16,7 @@ const Skills = () => {
     <div className='flex flex-col items-center'>
       <h1 className='text-2xl font-bold'>Habilidades</h1>
       <hr />
-      <div className='grid grid-cols-6 mt-4 w-full items-center justify-items-center gap-8'>
+      <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 mt-4 w-full items-center justify-items-center gap-8'>
         {
             datas && datas.map((data)=>{
                 return(
