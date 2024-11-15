@@ -21,7 +21,9 @@ const Certificados = ({url}:ICertificado) => {
         type="application/pdf"
         className="w-full h-full"
       >
-        <p>Tu navegador no soporta PDF. Puedes <a href={url}>descargar el PDF aquí</a>.</p>
+        <div className="absolute flex justify-center items-center w-full h-full bg-gray-800 bg-opacity-50 text-white text-center p-4">
+          <p>Tu navegador no soporta PDF. Puedes <a href={url}>descargar el PDF aquí</a>.</p>
+        </div>
       </object>
       <Button className="absolute right-8 bottom-4"
         onClick={handleClick}
