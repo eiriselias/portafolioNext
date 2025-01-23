@@ -1,17 +1,39 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import proyects from "@/helpers/proyects.helpers"
-import Link from 'next/link'
+import Button from '../ui/Button'
+import Link from 'next/link';
+
+interface IProyect {
+    id: number;
+    name: string;
+    miniDescription: string;
+    description: string;
+    imgProyect: string;
+    imgDev: string;
+    url: string;
+    skills:{
+        id: number;
+        image: string;
+        name: string;
+    }[]
+}
 
 const Proyects = () => {
-  const proyectos = proyects
+
+  const [openModal, setOpenModal] = useState(false);
+  const [modalProyect, setModalProyect] = useState<IProyect>();
+  const proyectos: IProyect[] = proyects
+
   return (
-    <div className='bg-primaryColor flex flex-col items-center p-1 sm:p-4 md:p-16'>
+    <div className='bg-primaryColor flex flex-col items-center p-1 sm:p-4 md:p-16 relative'>
       <h1 className='text-2xl font-bold text-white mb-8'>Proyectos</h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4'>
         {
           proyectos && proyectos.map((proyect)=>{
             return(
-              <Link href={proyect.url} target='_blank' key={proyect.id}> 
+              <>
+              <button onClick={()=>{setOpenModal(true); setModalProyect(proyect)}} key={proyect.id}> 
                 <div className='bg-white rounded-lg overflow-hidden animate-show' >
                   <div className='w-full h-44 overflow-hidden'>
                       <img src={proyect.imgProyect} alt={`img-${proyect.name}`} />
@@ -45,7 +67,54 @@ const Proyects = () => {
                     }
                   </div>
                 </div>
-             </Link>
+             </button>             
+              {
+                openModal && <div className="bg-slate-500 absolute left-0 top-0 w-full h-full">
+                  <div className='flex justify-center items-center h-full'>
+                    <div className='bg-white w-1/2 opacity-100 flex flex-col items-center relative'>
+                      {
+                        modalProyect &&
+                        <>
+                          <div className='p-4 text-3xl font-bold'>
+                            <h1 className='uppercase'>{modalProyect.name}</h1>
+                            <div className='absolute top-2 right-2'>
+                              <Button onClick={()=>setOpenModal(false)}>X</Button>
+                            </div>
+                          </div>
+                            <img src={modalProyect.imgProyect} alt={modalProyect.name} />
+                            <Link className='bg-primaryColor text-white text-2xl font-bold px-4 py-2 rounded-full my-4 transition duration-300 ease-in-out cursor-pointer hover:scale-105' 
+                              href={modalProyect.url} target="_blank" >Visitar</Link>
+                          <div className='flex flex-col items-center justify-center w-11/12'>
+                            <p>{modalProyect.description}</p>
+                          </div>
+                          <div className='grid grid-cols-4 gap-6 my-8'>
+                          {
+                            modalProyect.skills && modalProyect.skills.map((skill)=>{
+                              return(
+                                <div className='group flex flex-col justify-center items-center' key={skill.id}>
+                                  <img 
+                                    src={skill.image} 
+                                    alt={`skill${skill.id}`}                               
+                                    className='h-8 w-8 mr-2'
+                                  />
+                                  <div className=''>
+                                    {skill.name}
+                                  </div>
+                                </div>
+                              )
+                            })
+                          }
+                          </div>
+                          <div className='mb-4'>
+                            <Button onClick={()=>setOpenModal(false)}>Cerrar</Button>
+                          </div>
+                        </>
+                      }
+                    </div>
+                  </div>
+                </div>
+              }
+             </>
             )
           })
         }
