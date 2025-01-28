@@ -10,11 +10,11 @@ export default function Home() {
       <section id='principal' className='h-[82vh] w-full'>
         <Principal />
       </section>
-      <section id='skills' className='pageContainer'>  
-        <Skills /> 
-      </section>
       <section id="proyects" className='w-full'>
         <Proyects />
+      </section>
+      <section id='skills' className='pageContainer'>  
+        <Skills /> 
       </section>
    </div>
   );
