@@ -21,6 +21,10 @@ const Principal = () => {
             </div>        
             <h1 className='font-bold text-4xl'>Eiris Salazar</h1> 
             <p className='text-xl'>Full Stack Developer</p>
+            <div className='flex gap-4 mt-4'>
+              <img src="https://github-readme-stats.vercel.app/api?username=eiriselias&show_icons=true&theme=radical" alt="Estadísticas de GitHub"  className='h-40'/>
+              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eiriselias&layout=compact&theme=radical" alt="Top Lenguajes" className='h-40'/>
+            </div>
             <Button onClick={ handelClick } className="mt-16">Ver Mi CV</Button>
           </div>
       </div>
