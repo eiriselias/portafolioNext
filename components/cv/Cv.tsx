@@ -11,7 +11,7 @@ const Cv = ()=>{
   return(
     <div className="h-full relative">
       <object
-        data="/documents/Curriculum2024.pdf"
+        data="/documents/SALAZAR_EIRIS_CV.pdf"
         type="application/pdf"
         className="w-full h-full"
       >
