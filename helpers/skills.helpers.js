@@ -1,15 +1,15 @@
 const skillsData = [
     {
         "id": 1,
-        "name":"React",
-        "image":"https://i.imgur.com/aAsnw7j.png",
+        "name":"NextJs",
+        "image":"https://i.imgur.com/AFLz9gi.png",
         "clase":""
     },
     {
         "id": 2,
-        "name":"NextJs",
-        "image":"https://i.imgur.com/AFLz9gi.png",
-        "clase":""
+        "name":"React",
+        "image":"https://i.imgur.com/aAsnw7j.png",
+        "clase":"bg-black p-1"
     },
     {
         "id": 3,
@@ -123,6 +123,12 @@ const skillsData = [
         "id": 21,
         "name":"AppSheet",
         "image":"https://i.imgur.com/NPpQhmT.png",
+        "clase":""
+    },
+    {
+        "id": 22,
+        "name":"Miro",
+        "image":"https://imgur.com/TMWXzhg.png",
         "clase":""
     },
 ]

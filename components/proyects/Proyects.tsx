@@ -16,6 +16,7 @@ interface IProyect {
         id: number;
         image: string;
         name: string;
+        clase?: string;
     }[]
 }
 
@@ -30,10 +31,10 @@ const Proyects = () => {
       <h1 className='text-2xl font-bold text-white mb-8'>Proyectos</h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4'>
         {
-          proyectos && proyectos.map((proyect)=>{
+          proyectos && proyectos.slice().reverse().map((proyect)=>{
             return(
-              <>
-              <button onClick={()=>{setOpenModal(true); setModalProyect(proyect)}} key={proyect.id}> 
+              <div key={proyect.id}>
+              <button onClick={()=>{setOpenModal(true); setModalProyect(proyect)}} > 
                 <div className='bg-white rounded-lg overflow-hidden animate-show' >
                   <div className='w-full h-44 overflow-hidden'>
                       <img src={proyect.imgProyect} alt={`img-${proyect.name}`} />
@@ -56,7 +57,7 @@ const Proyects = () => {
                             <img 
                               src={skill.image} 
                               alt={`skill${skill.id}`}                               
-                              className='h-8 w-8 gap-2 mr-2'
+                              className={`h-8 w-8 gap-2 mr-2 ${skill.clase}`}
                             />
                             <div className='absolute bottom-full text-[10px] mb-2 hidden group-hover:block bg-primaryColor text-white p-2 rounded'>
                               {skill.name}
@@ -114,7 +115,7 @@ const Proyects = () => {
                   </div>
                 </div>
               }
-             </>
+             </div>
             )
           })
         }
