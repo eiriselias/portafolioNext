@@ -1,9 +1,12 @@
+'use client'
 import {certificadosData, ICertificado} from "@/helpers/certificados.helpers"
+import { useSEO } from "@/hooks/useSEO"
 import Link from "next/link"
 
 const CertificadosPage = () => {
 
    const datas:ICertificado[] = certificadosData
+   useSEO("certificados","lista de certificados de estudios");
 
    return (
      <div className="flex flex-col items-center mt-16">

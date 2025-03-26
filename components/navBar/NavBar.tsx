@@ -39,7 +39,7 @@ const NavBar = () => {
             </ul>
         </div>
         <div className={`hover:bg-selectColor hidden p-4 md:flex hover:cursor-pointer ${bars ? "md:flex":"hidden"}`}>
-            <Link href="/signIn">Iniciar Sesión</Link>
+            <Link href="/signIn"></Link>
         </div> 
     </nav>
   )
