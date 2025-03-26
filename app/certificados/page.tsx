@@ -14,7 +14,7 @@ const CertificadosPage = () => {
          </div>
         <div className="w-full md:w-[80%] flex flex-col">        
          {
-               datas && datas.map((data)=>{
+               datas && datas.slice().reverse().map((data)=>{
                   return (
                      <Link
                         href={`/certificados/${data.id}`}
