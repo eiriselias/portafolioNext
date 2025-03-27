@@ -8,7 +8,11 @@ import Footer from "@/components/footer/Footer";
 export const metadata: Metadata = {
   title: "Portafolio Eiris",
   description: "Portafolio personal de Eiris Elias Salazar Aguilar",
-  icons:"/favicon.svg",
+  icons: {
+    icon: "/images/portfolio.svg",
+  },
+
+  
 };
 
 export default function RootLayout({

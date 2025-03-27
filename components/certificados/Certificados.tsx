@@ -3,12 +3,14 @@ import React from 'react'
 import Button from '../ui/Button'
 import { useRouter } from 'next/navigation'
 import {ICertificado} from '@/helpers/certificados.helpers'
+import { useSEO } from '@/hooks/useSEO'
 
 
 
-const Certificados = ({url}:ICertificado) => {
+const Certificados = ({url, name}:ICertificado) => {
 
     const router = useRouter()
+    useSEO(`${name} - Certificado`,`Certificado de estudio ${name}`)
 
     const handleClick = ()=>{
         router.push("/certificados")
