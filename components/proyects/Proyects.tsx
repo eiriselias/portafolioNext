@@ -70,25 +70,33 @@ const Proyects = () => {
                 </div>
              </button>             
               {
-                openModal && <div className="bg-slate-500 absolute left-0 top-0 w-full h-full">
+                openModal && <div className="bg-slate-500/40 absolute left-0 top-0 w-full h-full">
                   <div className='flex justify-center items-center h-full'>
                     <div className='bg-white w-1/2 opacity-100 flex flex-col items-center relative'>
                       {
                         modalProyect &&
                         <>
-                          <div className='p-4 text-3xl font-bold'>
+                          <div className='p-4 text-3xl text-white bg-primaryColor w-full text-center'>
                             <h1 className='uppercase'>{modalProyect.name}</h1>
-                            <div className='absolute top-2 right-2'>
-                              <Button onClick={()=>setOpenModal(false)}>X</Button>
+                            <div 
+                            className="absolute hover:bg-red-400 right-4 top-4 w-10 h-8 py-4 rounded-full flex items-center justify-center
+                            transition duration-300 ease-in-out cursor-pointer hover:scale-105  ">
+                            <button 
+                              onClick={() => setOpenModal(false)}
+                              className="text-white text-lg font-bold"
+                            >
+                              X
+                            </button>
                             </div>
                           </div>
                             <img src={modalProyect.imgProyect} alt={modalProyect.name} />
-                            <Link className='bg-primaryColor text-white text-2xl font-bold px-4 py-2 rounded-full my-4 transition duration-300 ease-in-out cursor-pointer hover:scale-105' 
+                            <Link className='text-primaryColor my-4 text-2xl transition duration-300 ease-in-out cursor-pointer hover:scale-105' 
                               href={modalProyect.url} target="_blank" >Visitar</Link>
                           <div className='flex flex-col items-center justify-center w-11/12'>
                             <p>{modalProyect.description}</p>
+                            <hr className='w-full mt-4'/>
                           </div>
-                          <div className='grid grid-cols-4 gap-6 my-8'>
+                          <div className='grid grid-cols-6 gap-6 my-8'>
                           {
                             modalProyect.skills && modalProyect.skills.map((skill)=>{
                               return(
@@ -106,8 +114,10 @@ const Proyects = () => {
                             })
                           }
                           </div>
-                          <div className='mb-4'>
-                            <Button onClick={()=>setOpenModal(false)}>Cerrar</Button>
+                          <div className='bg-primaryColor w-full flex justify-center items-center py-4'>
+                            <Button 
+                            className='bg-white'
+                            onClick={()=>setOpenModal(false)}>Cerrar</Button>
                           </div>
                         </>
                       }
