@@ -23,10 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header>
-          <NavBar />
-        </header>
-        <main className="bg-fondColor mt-12">
+        <NavBar />
+        <main className="bg-fondColor">
           {children}
         </main>
         <footer>

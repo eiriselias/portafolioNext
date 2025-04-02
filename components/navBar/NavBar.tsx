@@ -6,7 +6,7 @@ const NavBar = () => {
     const [bars, setBars] = useState(false);
 
   return (
-    <nav className='flex justify-between md:px-14 py-4 md:py-0 font-bold bg-primaryColor text-white fixed z-50 w-full '>
+    <nav className='flex justify-between md:px-14 py-4 md:py-0 font-bold bg-primaryColor text-white sticky top-0 z-50 w-full '>
         <div className='flex items-center hover:bg-selectColor px-4  hover:cursor-pointer'>
             <Link href="/" className='flex items-center gap-2'>
                 <i className="fa-duotone fa-solid fa-briefcase"></i>
@@ -25,10 +25,10 @@ const NavBar = () => {
                     <Link href="/">Principal</Link>
                 </li>
                 <li className='hover:bg-selectColor p-4' onClick={()=>setBars(!bars)}>
-                    <Link href="/#skills">Habilidades</Link>
+                    <Link href="/#proyects">Proyectos</Link>
                 </li>
                 <li className='hover:bg-selectColor p-4' onClick={()=>setBars(!bars)}>
-                    <Link href="/#proyects">Proyectos</Link>
+                    <Link href="/#skills">Habilidades</Link>
                 </li>
                 <li className='hover:bg-selectColor p-4' onClick={()=>setBars(!bars)}>
                     <Link href="/certificados">Certificados</Link>
