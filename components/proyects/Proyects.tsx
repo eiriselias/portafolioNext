@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Button from '../ui/Button'
 import Link from 'next/link';
 import { getProyects } from '@/sanity/sanity-utils';
-import Enconstrucion from '../enconstrucion/Enconstrucion';
 
 interface IProyect {
     _id: string;

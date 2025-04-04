@@ -1,5 +1,5 @@
 
-import {certificadosData, ICertificado} from "@/helpers/certificados.helpers"
+import { ICertificado} from "@/helpers/certificados.helpers"
 import { getCertificados } from "@/sanity/sanity-utils"
 //import { useSEO } from "@/hooks/useSEO"
 import Link from "next/link"
