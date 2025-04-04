@@ -1,5 +1,5 @@
 import React from 'react'
-import skillData from "@/helpers/skills.helpers"
+import { getSkills } from '@/sanity/sanity-utils'
 
 interface skill {
     id: number,
@@ -8,9 +8,9 @@ interface skill {
     clase:string
 }
 
-const Skills = () => {
+const Skills = async() => {
 
-    const datas:skill[] = skillData
+    const datas:skill[] = await getSkills()
 
   return (
     <div className='flex flex-col items-center'>

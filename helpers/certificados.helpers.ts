@@ -57,7 +57,7 @@ export const certificadosData = [
 
 
 export interface ICertificado {
-    id: number,
+    _id: string,
     name: string,
     entity: string,
     url: string
