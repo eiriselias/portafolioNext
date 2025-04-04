@@ -1,12 +1,14 @@
-'use client'
+
 import {certificadosData, ICertificado} from "@/helpers/certificados.helpers"
-import { useSEO } from "@/hooks/useSEO"
+import { getCertificados } from "@/sanity/sanity-utils"
+//import { useSEO } from "@/hooks/useSEO"
 import Link from "next/link"
 
-const CertificadosPage = () => {
+const CertificadosPage = async() => {
 
-   const datas:ICertificado[] = certificadosData
-   useSEO("certificados","lista de certificados de estudios");
+   const datas:ICertificado[] = await getCertificados();
+
+   //useSEO("certificados","lista de certificados de estudios");
 
    return (
      <div className="flex flex-col items-center mt-16">
@@ -20,9 +22,9 @@ const CertificadosPage = () => {
                datas && datas.slice().reverse().map((data)=>{
                   return (
                      <Link
-                        href={`/certificados/${data.id}`}
+                        href={`/certificados/${data._id}`}
                         className="w-full bg-white py-2 px-8 mb-2 hover:bg-primaryColor hover:text-white hover:font-bold flex justify-between"
-                        key={data.id}
+                        key={data._id}
                      >
                         <p>{data.name}</p>
                         <p>{data.entity}</p>
