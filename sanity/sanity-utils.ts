@@ -5,7 +5,8 @@ import {dataset, projectId, apiVersion} from './env'
 export const client = createClient({
     projectId,
     dataset,
-    apiVersion
+    apiVersion,
+    useCdn: true 
 })
 
 export async function getUsers() {
@@ -20,7 +21,7 @@ export async function getUsers() {
 }
 
 export async function getSkills() {
-    const query = `*[_type == "skills"]{
+    const query = `*[_type == "skills"] | order(name){
     _id,
     name,
     image,
@@ -44,7 +45,7 @@ export async function getCertificados() {
 }
 
 export async function getProyects() {
-    const query = `*[_type == "proyects"]{
+    const query = `*[_type == "proyects"] | order(_createdAt){
     _id,
     name,
     miniDescription,

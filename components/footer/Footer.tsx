@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className='bg-primaryColor flex flex-col items-center text-white font-bold py-4'>
+    <div className='bg-primaryColor flex flex-col items-center text-white font-bold py-8'>
       <div className='flex gap-8 mb-2'>
         <Link href="https://www.linkedin.com/in/eiriselias" target="_blank">
           <i className="fa-brands fa-linkedin text-4xl hover:opacity-80"></i>
