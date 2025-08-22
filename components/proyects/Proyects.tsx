@@ -97,7 +97,7 @@ const Proyects = () => {
                             </button>
                             </div>
                           </div>
-                            <img src={modalProyect.imgProyect} alt={modalProyect.name} />
+                            <img src={modalProyect.imgProyect} alt={modalProyect.name} className='h-96 w-full overflow-hidden' />
                             {
                               modalProyect.url ? (<Link className='text-primaryColor my-4 text-2xl transition duration-300 ease-in-out cursor-pointer hover:scale-105' 
                               href={modalProyect.url} target="_blank" >Visitar</Link>):(<div className='mt-8'></div>)
